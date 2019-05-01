@@ -1,0 +1,10 @@
+{
+  "actualCacheVersion"		: "1.0",
+  "minimalCacheVersion"		: "1.0",
+  
+  "urlAtListOfURLsToUpdatesByVersion": "https://EnterYourURL/RXCacheConfig/listOfURLsToUpdatesByVersion.json",
+  "urlAtZipArchiveOfCacheContent"    : "https://EnterYourURL/RXCacheContent.zip",
+  
+  "zippedArchiveSizeInMB"   : "ENTER_YOUR_NUMBER",
+  "unzippedArchiveSizeInMB" : "ENTER_YOUR_NUMBER"
+}

@@ -1,0 +1,7 @@
+ // Init image from sandbox's file
+    
+    NSString* globarlURL = @"https://raw.githubusercontent.com/m1a7/DemoCacheStorage/master/RXCacheContent/ship.jpg";
+    NSString* localPath  = [self.cache sandbox_convertGlobalURLToLocalPath:globarlURL];
+    NSData*   data       = [NSData dataWithContentsOfFile:localPath];
+    UIImage*  image      = [UIImage imageWithData:data];
+    NSLog(@"image = %@",image);

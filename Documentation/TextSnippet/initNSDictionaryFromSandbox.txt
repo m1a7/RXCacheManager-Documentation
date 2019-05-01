@@ -1,0 +1,9 @@
+ // Init json from sandbox's file
+    
+    NSString* globarlURL = @"https://raw.githubusercontent.com/m1a7/DemoCacheStorage/master/RXCacheContent/listOfWorkers.json";
+    NSString* localPath  = [self.cache sandbox_convertGlobalURLToLocalPath:globarlURL];
+    NSData*   data       = [NSData dataWithContentsOfFile:localPath];
+    NSError* error;
+    NSDictionary*  jsonfile = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    NSLog(@"error    = %@",error);
+    NSLog(@"jsonfile = %@",jsonfile);

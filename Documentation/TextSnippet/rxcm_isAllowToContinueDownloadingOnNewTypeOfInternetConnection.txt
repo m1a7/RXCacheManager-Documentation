@@ -1,0 +1,12 @@
+- (void) rxcm_isAllowToContinueDownloadingOnNewTypeOfInternetConnection:(RXCM_TypesOfInternetConnection)newType
+                                 completion:(void(^)(BOOL isContinueWorkOnNewTypeOfConnection))completion
+{
+    __weak AppDelegate* weak = self;
+    if ([NSThread isMainThread]){
+        [self showAlertIsContinueWorkOnNewTypeOfConnection:completion];
+    }else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weak showAlertIsContinueWorkOnNewTypeOfConnection:completion];
+        });
+    }
+}

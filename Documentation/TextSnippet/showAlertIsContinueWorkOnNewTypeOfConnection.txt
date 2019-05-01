@@ -1,0 +1,36 @@
+- (void) showAlertIsContinueWorkOnNewTypeOfConnection:(void(^)(BOOL isContinueWorkOnNewTypeOfConnection))completion
+{
+    NSString* title = @"Connection type has been changed";
+    NSString* message = @"Continue downloading on another connection type ?";
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction *yes = [UIAlertAction actionWithTitle:@"YES"
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction * _Nonnull action) {
+                                                    completion(YES);
+                                                }];
+
+    UIAlertAction *no = [UIAlertAction actionWithTitle:@"NO"
+                                                 style:UIAlertActionStyleCancel
+                                               handler:^(UIAlertAction * _Nonnull action) {
+                                                   completion(NO);
+                                               }];
+
+    [alert addAction:yes];
+    [alert addAction:no];
+
+    UIViewController* rootvc = self.window.rootViewController;
+
+    if ([rootvc presentedViewController]) {
+        [[rootvc presentedViewController] dismissViewControllerAnimated:NO completion:^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [rootvc presentViewController:alert animated:YES completion:nil];
+            });
+        }];
+    } else {
+        [rootvc presentViewController:alert animated:YES completion:nil];
+    }
+}

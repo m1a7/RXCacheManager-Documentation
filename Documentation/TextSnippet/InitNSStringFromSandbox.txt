@@ -1,0 +1,15 @@
+    // Init nsstring from sandbox's file
+    NSString* globarlURL = @"https://raw.githubusercontent.com/m1a7/DemoCacheStorage/master/RXCacheContent/raport.txt";
+    NSString* localPath = [self.cache sandbox_convertGlobalURLToLocalPath:globarlURL];
+    NSData* data = [NSData dataWithContentsOfFile:localPath];
+    
+    // Init NSString The First Way
+    NSError* error;
+    NSString *textFileFirstWay = [NSString stringWithContentsOfFile:localPath encoding:NSUTF8StringEncoding error:&error];
+    NSLog(@"error            = %@",error);
+    NSLog(@"textFileFirstWay = %@",textFileFirstWay);
+    
+    // Init NSString The Second Way
+    NSString *textFileSecondWay = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+    NSLog(@"textFileSecondWay = %@",textFileSecondWay);
+    

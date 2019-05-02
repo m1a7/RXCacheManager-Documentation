@@ -45,7 +45,7 @@
 <br>
 <br>
 
-![5cc72762379ff](/Documentation/ScreeSnippet/RXCM_DEMO.gif)
+![5cc72762379ff](/Documentation/ScreeSnippet/RXCM_DEMO.gif?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 <br>
 <br>
@@ -53,7 +53,7 @@
 ## Концепция
 
 **RXCM** (RXCacheManager) - это класс который при открытии приложения получает от сервера информацию о состоянии облочного хранилища. Затем **RXCM** сравнивает версию кэша на устройстве и версию хранилища в облаке. После чего совершает обновления. 
-![5cc72762379ff](/Documentation/ScreeSnippet/ThePrincipleOfWorkingRXCacheManager.png)
+![5cc72762379ff](/Documentation/ScreeSnippet/ThePrincipleOfWorkingRXCacheManager.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 ## Какой тип севера требуется для работы RXCM ?
 
@@ -82,7 +82,7 @@
 
 4. **HistoryOfVersion** - папка в которой храняться json файлы которые описывает какие изменения были совершены между версией А и Б.
 
-![5cc7281c60e9e](/Documentation/ScreeSnippet/structureAndArrangementOfFilesInRootDirectory.png)
+![5cc7281c60e9e](/Documentation/ScreeSnippet/structureAndArrangementOfFilesInRootDirectory.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 #### Значение содержимого конфигурационных файлов
 
@@ -92,7 +92,7 @@
 
 (Симметричный объект в фраемворке - **RCXMCacheStatus: NSObject**)
 
-![5cc74f4759656](/Documentation/ScreeSnippet/cacheStatus2.png)
+![5cc74f4759656](/Documentation/ScreeSnippet/cacheStatus2.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 | Ключ                  | Объяснение                                                                                                        |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -131,7 +131,7 @@
 
 2. **listOfURLsToUpdatesByVersion.json**
 
-![5cc74f9dbe1a1](/Documentation/ScreeSnippet/listOfURLsToUpdatesByVersion2.png)
+![5cc74f9dbe1a1](/Documentation/ScreeSnippet/listOfURLsToUpdatesByVersion2.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 | Ключ                | Объяснение                                                                           |
 | ------------------- | ------------------------------------------------------------------------------------ |
@@ -139,7 +139,7 @@
 
 3. **changes_1.0_1.1.json**
 
-![5cc74fbd6e388](/Documentation/ScreeSnippet/changes_1.0_1.1.png)
+![5cc74fbd6e388](/Documentation/ScreeSnippet/changes_1.0_1.1.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 Файл содержит массив изменений и номера версий между которыми они были совершены .(Симметричного объект фраемворк не имеет).
 
@@ -261,7 +261,7 @@
 
 (⚠️ Не забудьте вставить собственные значения в полях относящихся к размеру архива и собственный путь до конфигурационных файлов).
 
-[Copy code](Documentation/TextSnippet/cacheStatus_Snippet.txt)![5cc84cc2388ee](/Documentation/ScreeSnippet/cacheStatusSnippet.png)
+[Copy code](Documentation/TextSnippet/cacheStatus_Snippet.txt)![5cc84cc2388ee](/Documentation/ScreeSnippet/cacheStatusSnippet.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 #### Шаг 4
 
@@ -269,13 +269,13 @@ Cоздайте файл `listOfURLsToUpdatesByVersion.json` в папке **RXC
 
 [Copy code](Documentation/TextSnippet/listOfURLsToUpdatesByVersion_EmptySnippet.txt)
 
-![5cc84e986da8a](/Documentation/ScreeSnippet/listOfURLsToUpdatesByVersion_EmptySnippet.png)
+![5cc84e986da8a](/Documentation/ScreeSnippet/listOfURLsToUpdatesByVersion_EmptySnippet.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 #### Сервер к поддержке RXCM готов !
 
 Все должно было получиться так, как изображено на этой схеме
 
-![5cc7281c60e9e](/Documentation/ScreeSnippet/structureAndArrangementOfFilesInRootDirectory.png) 
+![5cc7281c60e9e](/Documentation/ScreeSnippet/structureAndArrangementOfFilesInRootDirectory.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC) 
 
 ## Что менять в конфигурационных файлов после изменения содержимого кэша ?
 
@@ -358,19 +358,19 @@ Cоздайте файл `listOfURLsToUpdatesByVersion.json` в папке **RXC
 
 Создайте папку **Frameworks** в папке вашего проекта и скопируйте в нее файл **RXCM.framework**.
 
-![5cc878d7b5ac9](/Documentation/ScreeSnippet/addRXCM-1.png)
+![5cc878d7b5ac9](/Documentation/ScreeSnippet/addRXCM-1.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 #### Шаг 2
 
 Перетащите папку вместе с вложеным фрамеворком в структуру проекта.
 
-![5cc879443153e](/Documentation/ScreeSnippet/addRXCM-2.png)
+![5cc879443153e](/Documentation/ScreeSnippet/addRXCM-2.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 #### Шаг 3
 
 Во вкладке **General** добавьте **RXCM.framework** в секции **Embedded Binaries** и **Linked Frameworks and Libraries**.
 
-![5cc879915cdeb](/Documentation/ScreeSnippet/addRXCM-3.png)
+![5cc879915cdeb](/Documentation/ScreeSnippet/addRXCM-3.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 ## Интеграция RXCM в проект
 
@@ -442,7 +442,7 @@ return YES;
 
 **Реализация методов RXInternalNetworkCacheManagement**
 
-[Open image in full size](/Documentation/ScreeSnippet/RXInternalNetworkCacheManagement.png)![5cc8951b024d6](/Documentation/ScreeSnippet/RXInternalNetworkCacheManagement.png)
+[Open image in full size](/Documentation/ScreeSnippet/RXInternalNetworkCacheManagement.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)![5cc8951b024d6](/Documentation/ScreeSnippet/RXInternalNetworkCacheManagement.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 (Если вы выбрали **RXInternalNetworkCacheManagement** вы можете не реализовывать методы вообще). 
 
@@ -453,17 +453,17 @@ return YES;
 
 Пример реализации одного из методов протокола:
 
-[Open image in full size](/Documentation/ScreeSnippet/rxcm_willCheckingForMoreActualCacheStatusVersion_Body.png)![5cc899949d596](/Documentation/ScreeSnippet/rxcm_willCheckingForMoreActualCacheStatusVersion_Body.png)
+[Open image in full size](/Documentation/ScreeSnippet/rxcm_willCheckingForMoreActualCacheStatusVersion_Body.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)![5cc899949d596](/Documentation/ScreeSnippet/rxcm_willCheckingForMoreActualCacheStatusVersion_Body.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 #### или
 
 **Реализация методов RXRemoteNetworkCacheManagement**
 
-[Open image in full size](/Documentation/ScreeSnippet/RXRemoteNetworkCacheManagement.png)![5cc89ecc743f6](/Documentation/ScreeSnippet/RXRemoteNetworkCacheManagement.png)
+[Open image in full size](/Documentation/ScreeSnippet/RXRemoteNetworkCacheManagement.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)![5cc89ecc743f6](/Documentation/ScreeSnippet/RXRemoteNetworkCacheManagement.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 Пример реализации одного из методов протокола:
 
-[Copy code](Documentation/TextSnippet/rxcm_expectsActualCacheStatusFromURL.txt)![5cc8a1a14caf5](/Documentation/ScreeSnippet/rxcm_expectsActualCacheStatusFromURL.png)
+[Copy code](Documentation/TextSnippet/rxcm_expectsActualCacheStatusFromURL.txt)![5cc8a1a14caf5](/Documentation/ScreeSnippet/rxcm_expectsActualCacheStatusFromURL.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 ### Шаг 5 (Необязательно)
 
@@ -471,7 +471,7 @@ return YES;
 
 Эти методы отображают процесс обновления, уведомляют о завершении обновления или другое.
 
-[Open image in full size](/Documentation/ScreeSnippet/RXCacheManagerHelperProtocol.png)![5cc8afa94410b](/Documentation/ScreeSnippet/RXCacheManagerHelperProtocol.png)
+[Open image in full size](/Documentation/ScreeSnippet/RXCacheManagerHelperProtocol.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)![5cc8afa94410b](/Documentation/ScreeSnippet/RXCacheManagerHelperProtocol.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 ### Шаг 6
 
@@ -565,11 +565,11 @@ whatTypeOfConnectionCanDownloadCache;
 ` -rxcm_isAllowToContinueDownloadingOnNewTypeOfInternetConnection`  в котором вы должны спросить у пользователя хочет ли он продолжить скачивание на новом тип соединения.
 
 Пример реализации этого метода:
-[Copy code](Documentation/TextSnippet/rxcm_isAllowToContinueDownloadingOnNewTypeOfInternetConnection.txt)![5cc8bbe38c361](/Documentation/ScreeSnippet/rxcm_isAllowToContinueDownloadingOnNewTypeOfInternetConnection.png)
+[Copy code](Documentation/TextSnippet/rxcm_isAllowToContinueDownloadingOnNewTypeOfInternetConnection.txt)![5cc8bbe38c361](/Documentation/ScreeSnippet/rxcm_isAllowToContinueDownloadingOnNewTypeOfInternetConnection.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 Пример реализации метода который показывает **UIAlertViewController**:
 
-[Copy code](Documentation/TextSnippet/showAlertIsContinueWorkOnNewTypeOfConnection.txt)![5cc8bc98834ca](/Documentation/ScreeSnippet/showAlertIsContinueWorkOnNewTypeOfConnection.png)
+[Copy code](Documentation/TextSnippet/showAlertIsContinueWorkOnNewTypeOfConnection.txt)![5cc8bc98834ca](/Documentation/ScreeSnippet/showAlertIsContinueWorkOnNewTypeOfConnection.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 ### 2. Печать логов в консоль
 
@@ -591,15 +591,15 @@ whatTypeOfConnectionCanDownloadCache;
 
 **Инициализация NSString из текстового файла.**
 
-[Copy code](Documentation/TextSnippet/InitNSStringFromSandbox.txt)![5cc97b7727e8d](/Documentation/ScreeSnippet/InitNSStringFromSandbox.png)
+[Copy code](Documentation/TextSnippet/InitNSStringFromSandbox.txt)![5cc97b7727e8d](/Documentation/ScreeSnippet/InitNSStringFromSandbox.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 **Инициализация NSDictionary из json файла.**
 
-[Copy code](Documentation/TextSnippet/initNSDictionaryFromSandbox.txt)![5cc97cafc2c8a](/Documentation/ScreeSnippet/initNSDictionaryFromSandbox.png)
+[Copy code](Documentation/TextSnippet/initNSDictionaryFromSandbox.txt)![5cc97cafc2c8a](/Documentation/ScreeSnippet/initNSDictionaryFromSandbox.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 **Инициализация UIImage из .png файла.**
 
-[Copy code](Documentation/TextSnippet/initUIImageFromSandbox.txt)![5cc97e436f561](/Documentation/ScreeSnippet/initUIImageFromSandbox.png)
+[Copy code](Documentation/TextSnippet/initUIImageFromSandbox.txt)![5cc97e436f561](/Documentation/ScreeSnippet/initUIImageFromSandbox.png?token=ADETHLSHBACHKUZLAQVMFVC4ZHORC)
 
 ### 5. Удаление конфигурационных объектов из NSUserDefault
 
@@ -624,3 +624,10 @@ status.minimalCacheVersion = @"1.0";
 ## Автор
 👨🏼‍💻 [@m1a7](github.com/m1a7) <br>
 👌🏻 thisismymail03@gmail.com
+
+## Дополнительно
+
+RXCacheManager  - это частная разработка с закрытым исходным кодом
+
+[🇺🇸 English Readme](Readme.md). <br>
+
